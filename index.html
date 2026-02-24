@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<title>Faqja ime si Shqipflas</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f0f0; }
+/* HEADER */
+header {
+  background: linear-gradient(to right,#0077cc,#00c6ff);
+  color:white; display:flex; align-items:center; padding:20px 40px;
+  position:sticky; top:0; z-index:1000;
+}
+header img { height:60px; margin-right:20px; cursor:pointer; }
+.header-content { text-align:center; width:100%; }
+.nav-buttons button {
+  background:none; border:none; padding:10px 20px; margin:5px; cursor:pointer;
+  font-size:16px; color:white; transition:0.3s;
+}
+.nav-buttons button:hover { color:#ffdd57; transform:scale(1.05); }
+
+/* HERO */
+.hero {
+  height:100vh;
+  background-image:url("https://i.postimg.cc/76Jr3LJ6/Getty-Images-900301626-437925-t2i3bm.webp");
+  background-size:cover; background-position:center; display:flex; flex-direction:column;
+  justify-content:center; padding:40px; color:white;
+}
+
+/* SECTION */
+section {
+  max-width:900px; margin:60px auto; padding:30px; background:white;
+  border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer { text-align:center; padding:20px; background:#333; color:white; }
+
+/* GALERI FOTO */
+.photo-slider { position:relative; overflow:hidden; margin-bottom:50px; }
+.photo-track { display:flex; transition:0.5s; }
+.photo-track img { width:100%; flex-shrink:0; border-radius:10px; cursor:pointer; }
+.slider-btn { position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(0,0,0,0.6); color:white; border:none; font-size:30px;
+  padding:10px 15px; cursor:pointer; border-radius:50%; }
+.prev { left:10px; } .next { right:10px; }
+/* MODAL */
+.modal { display:none; position:fixed; z-index:2000; left:0; top:0;
+  width:100%; height:100%; background:rgba(0,0,0,0.85); text-align:center; padding-top:80px; }
+.modal img { max-width:80%; max-height:80%; }
+.modal span { position:absolute; top:30px; right:50px; color:white; font-size:40px; cursor:pointer; }
+
+/* VIDEO */
+.video-slider { display:flex; gap:20px; overflow-x:auto; margin-top:30px; }
+.video-thumb { min-width:220px; cursor:pointer; text-align:center; }
+.video-thumb img { width:100%; border-radius:10px; }
+.video-player { margin-top:30px; }
+.video-container { position:relative; padding-bottom:56.25%; height:0; }
+.video-container iframe { position:absolute; width:100%; height:100%; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.postimg.cc/qBjnWMNn/images.jpg" onclick="loadHome()">
+  <div class="header-content">
+    <h1>Faqja ime si Shqipflas</h1>
+    <div class="nav-buttons">
+      <button onclick="loadPage('rreth')">Rreth Nesh</button>
+      <button onclick="loadPage('fjalor')">Fjalor</button>
+      <button onclick="loadPage('galeri')">Galeri</button>
+      <button onclick="loadPage('kontakti')">Kontakti</button>
+    </div>
+  </div>
+</header>
+
+<div id="content"></div>
+<footer>© 2026 Faqja Ime</footer>
+
+<script>
+function loadHome(){
+document.getElementById("content").innerHTML = `
+<div class="hero">
+  <h2>Mirë se vini</h2>
+  <p>Kjo është faqja kryesore me foto në sfond.</p>
+</div>
+
+<section>
+<h2>Misioni Ynë</h2>
+<p>Misioni ynë në fushën e arsimit për Gjuhë dhe Letërsi është të formojmë nxënës të ditur, të aftë për të menduar kritikisht dhe për t’u shprehur qartë, bukur dhe me vetëbesim. Gjuha është themeli i komunikimit dhe identitetit tonë, ndërsa letërsia është pasqyra e shpirtit njerëzor dhe e historisë sonë kulturore.</p>
+
+<p>Ne synojmë të zhvillojmë te nxënësit dashurinë për leximin dhe shkrimin, duke i njohur ata me vlerat më të mira të letërsisë shqipe dhe botërore. Përmes veprave të autorëve si Ismail Kadare, Migjeni, Naim Frashëri, si dhe të klasikëve botërorë si William Shakespeare dhe Victor Hugo, nxënësit pasurojnë horizontin e tyre kulturor dhe zhvillojnë ndjeshmërinë estetike.</p>
+
+<p>Një tjetër shtyllë e misionit tonë është kultivimi i mendimit kritik dhe aftësisë për analizë. Përmes diskutimeve, eseve, projekteve krijuese dhe interpretimit të teksteve letrare, nxënësit mësojnë të argumentojnë, të respektojnë mendimin ndryshe dhe të ndërtojnë qëndrime të pavarura.</p>
+
+<p>Ne besojmë se arsimi në Gjuhë dhe Letërsi nuk është vetëm përvetësim rregullash gramatikore apo njohje autorësh, por një proces formimi i plotë intelektual dhe moral. Ai ndihmon në ndërtimin e qytetarëve të përgjegjshëm, me identitet të qartë kulturor dhe me aftësi për të komunikuar në mënyrë efektive në çdo fushë të jetës.</p>
+
+<p>Misioni ynë është të krijojmë një mjedis mësimor frymëzues, ku fjala ka vlerë, libri është mik i përhershëm dhe dijet shndërrohen në urë drejt së ardhmes.</p>
+</section>
+
+<section>
+<h2>Fjalor</h2>
+<p>- Arsim: Mësimi dhe zhvillimi i dijes, aftësive dhe karakterit të një personi.</p>
+<p>- Gjuhë: Mjeti që përdorim për të folur dhe shkruar dhe për të kuptuar njëri-tjetrin.</p>
+<p>- Mendim kritik: Aftësia për të menduar me kujdes dhe për të dalluar të drejtën nga gabimi.</p>
+<p>- Analizë letrare: Shqyrtimi i një libri, poezisë ose tregimi për të kuptuar mesazhin dhe idetë.</p>
+<p>- Ese: Shkrim i shkurtër ku shpreh mendimin ose ndjenjat për një temë.</p>
+<p>- Figurë letrare: Mjeti që përdoret në shkrim për ta bërë gjuhën më të bukur (p.sh. metafora, krahasimi).</p>
+<p>- Identitet kulturor: Të qenit pjesë e kulturës dhe traditave të vendit tënd.</p>
+<p>- Krijimtari: Aftësia për të krijuar gjëra të reja dhe të ndryshme.</p>
+<p>- Komunikim efektiv: Të shprehësh qartë idetë dhe të kuptosh të tjerët.</p>
+</section>
+`;
+}
+
+function loadPage(page){
+  const content=document.getElementById("content");
+
+  if(page==="rreth"){ loadHome(); }
+
+  if(page==="fjalor"){
+    content.innerHTML = `
+      <section>
+        <h2>Fjalor</h2>
+        <p>Fjalor model për nxënësit.</p>
+      </section>`;
+  }
+
+  if(page==="galeri"){
+    content.innerHTML = `
+    <section>
+      <h2>🖼 Galeri Foto</h2>
+      <div class="photo-slider">
+        <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+        <div class="photo-track" id="photoTrack">
+          <img src="https://i.postimg.cc/3RFHq5bv/images.png" onclick="openModal(this.src)">
+          <img src="https://i.postimg.cc/76DF0tYD/Naim-Frasheri.jpg" onclick="openModal(this.src)">
+          <img src="https://i.postimg.cc/sXctcPvq/Untitled.jpg" onclick="openModal(this.src)">
+        </div>
+        <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+      </div>
+
+      <h2>🎬 Galeri Video</h2>
+      <div class="video-slider">
+        <div class="video-thumb" onclick="playVideo('r33SkG5fkWI')">
+          <img src="https://img.youtube.com/vi/r33SkG5fkWI/hqdefault.jpg">
+          <p>📘 Analizë Letrare</p>
+        </div>
+      </div>
+      <div class="video-player" id="video-player"></div>
+    </section>
+
+    <div id="myModal" class="modal">
+      <span onclick="closeModal()">&times;</span>
+      <img id="modalImg">
+    </div>`;
+  }
+
+  if(page==="kontakti"){
+    content.innerHTML = `
+      <section>
+        <h2>Kontakti</h2>
+        <p>Email: eltonxhemollari@yahoo.com</p>
+        <p>Tel: 0676440902</p>
+      </section>`;
+  }
+
+  window.scrollTo(0,0);
+}
+
+/* FUNKSIONE */
+let currentIndex=0;
+function moveSlide(direction){
+  const track=document.getElementById("photoTrack");
+  const total=track.children.length;
+  currentIndex+=direction;
+  if(currentIndex<0) currentIndex=total-1;
+  if(currentIndex>=total) currentIndex=0;
+  track.style.transform="translateX(-"+(currentIndex*100)+"%)";
+}
+function openModal(src){
+  document.getElementById("myModal").style.display="block";
+  document.getElementById("modalImg").src=src;
+}
+function closeModal(){ document.getElementById("myModal").style.display="none"; }
+function playVideo(id){
+  document.getElementById("video-player").innerHTML=`
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/${id}?autoplay=1" allowfullscreen></iframe>
+    </div>`;
+  document.getElementById("video-player").scrollIntoView({behavior:"smooth"});
+}
+
+loadHome();
+</script>
+</body>
+</html>
